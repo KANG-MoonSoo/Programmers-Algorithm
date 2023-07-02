@@ -3,12 +3,10 @@ class Solution {
         int ans = 0;
         for (int i = 0; i < signs.length; i++) {
             if (!signs[i]){
-                absolutes[i] *= -1;
-            }
-        }
-        for (int i = 0; i < absolutes.length; i++) {
-            ans += absolutes[i];
-        }
+                ans += absolutes[i] * -1;
+            }else
+                ans += absolutes[i];
+        } 
         return ans;
     }
 }
